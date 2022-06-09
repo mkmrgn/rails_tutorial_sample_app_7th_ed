@@ -2,11 +2,20 @@ ENV["RAILS_ENV"] ||= "test"
 require_relative "../config/environment"
 require "rails/test_help"
 require "minitest/reporters"
+#ENV["BUILDKITE_ANALYTICS_DEBUG_ENABLED"] = "1"
+require "buildkite/test_collector"
+
+Buildkite::TestCollector.configure(
+  token: ENV["BUILDKITE_ANALYTICS_TOKEN"],
+  hook: :minitest
+)
+  #url: "http://analytics-api.buildkite.localhost/v1/uploads"
+
 Minitest::Reporters.use!
 
 class ActiveSupport::TestCase
   # Run tests in parallel with specified workers
-  parallelize(workers: :number_of_processors)
+  #parallelize(workers: :number_of_processors)
   # Set up all fixtures in test/fixtures/*.yml.
   fixtures :all
 

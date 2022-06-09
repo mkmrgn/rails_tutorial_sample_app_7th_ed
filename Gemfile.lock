@@ -102,6 +102,9 @@ GEM
     bootstrap-will_paginate (1.0.0)
       will_paginate
     builder (3.2.4)
+    buildkite-test_collector (1.0.1)
+      activesupport (>= 5.2, < 8)
+      websocket (~> 1.2)
     capybara (3.37.1)
       addressable
       matrix
@@ -316,6 +319,7 @@ DEPENDENCIES
   bootsnap (= 1.12.0)
   bootstrap-sass (= 3.4.1)
   bootstrap-will_paginate (= 1.0.0)
+  buildkite-test_collector
   capybara (= 3.37.1)
   debug (= 1.5.0)
   faker (= 2.21.0)
@@ -341,7 +345,7 @@ DEPENDENCIES
   will_paginate (= 3.3.1)
 
 RUBY VERSION
-   ruby 3.1.2p20
+   ruby 2.7.5p203
 
 BUNDLED WITH
    2.3.14

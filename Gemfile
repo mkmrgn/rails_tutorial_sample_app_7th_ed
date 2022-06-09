@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.1.2"
+ruby "2.7.5"
 
 gem "rails",                      "7.0.3"
 gem "image_processing",           "1.12.2"
@@ -30,6 +30,7 @@ group :development do
 end
 
 group :test do
+  gem "buildkite-test_collector"
   gem "capybara",                 "3.37.1"
   gem "selenium-webdriver",       "4.2.0"
   gem "webdrivers",               "5.0.0"
